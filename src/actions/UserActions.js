@@ -50,15 +50,8 @@ function receiveLogout() {
 }
 
 
-// Calls the API to get a token and
 // dispatches actions along the way
 export function loginUser(creds) {
-  
-  /*let config = {
-    method: 'POST',
-    headers: { 'Content-Type':'application/x-www-form-urlencoded' },
-    body: `username=${creds.username}&password=${creds.password}`
-  }*/
   
   return dispatch => {
     // We dispatch requestLogin to kickoff the call to the API

@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { loginUser } from '../actions/UserActions'
-import Login from '../components/Login'
 import Navbar from '../components/Navbar'
 
 class App extends Component {
@@ -16,7 +14,6 @@ class App extends Component {
           dispatch={dispatch}
         />
         <div className='container'>
-          Test
         </div>
       </div>
     )

@@ -3,9 +3,6 @@ import {
   LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT_SUCCESS
 } from '../actions/UserActions'
 
-// The auth reducer. The starting state sets authentication
-// based on a token being in local storage. In a real app,
-// we would also want a util to check if the token is expired.
 function auth(state = {
     isFetching: false,
     isAuthenticated: localStorage.getItem('id_token') ? true : false
@@ -40,7 +37,7 @@ function auth(state = {
 }
 
 // We combine the reducers here so that they
-// can be left split apart above
+// can be left split apart above - To do more reducers
 const usersApp = combineReducers({
   auth
 })
