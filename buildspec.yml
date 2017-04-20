@@ -20,4 +20,5 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $IMAGE_REPO_NAME:$IMAGE_TAG
+      - echo $CODEBUILD_BUILD_ID
       - 'aws sns publish --topic-arn arn:aws:lambda:us-east-1:019453824943:function:my-react-app --message "{\"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
