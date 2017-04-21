@@ -1,3 +1,5 @@
+#React Redux APP , Dockerized and integrated with AWS codebuild, Lambda & SNS
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 This repo is Dockerized and integrated with AWS codebuild, Lambda & SNS
