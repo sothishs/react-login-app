@@ -72,3 +72,7 @@ See the section about [deployment](#deployment) for more information.
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+```
+Build code https://github.com/sothishs/lambda-gitbot
+```
