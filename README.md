@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This repo is Dockerized and integrated with AWS codebuild, Lambda & SNS
 
+
 ## Folder Structure
 
 After creation, your project should look like this:
