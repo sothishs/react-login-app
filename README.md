@@ -8,6 +8,7 @@ This repo is Dockerized and integrated with AWS codebuild, Lambda & SNS
 
 After creation, your project should look like this:
 
+
 ```
 .
 +-- src
