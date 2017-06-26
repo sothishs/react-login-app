@@ -2,7 +2,7 @@ version: 0.1
 
 environment_variables:
   plaintext:
-    SNS_TOPIC_ARN: arn:aws:sns:us-east-1:019453824943:codebuid-test-topic
+    SNS_TOPIC_ARN: arn:aws:sns:us-east-1:019453824943:ti-codebuild-demo
 
 phases:
   pre_build:
