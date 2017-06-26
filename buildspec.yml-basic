@@ -5,20 +5,17 @@ environment_variables:
     SNS_TOPIC_ARN: arn:aws:sns:us-east-1:019453824943:codebuid-test-topic
 
 phases:
+  install:
+    commands:
+      - echo Nothing to do in the install phase...
   pre_build:
     commands:
-      - echo Logging in to Docker Hub...
-      - docker login --username=$DOCKER_HUB_USERNAME --password=$DOCKER_HUB_PASSWORD          
+      - npm install
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...
-      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $IMAGE_REPO_NAME:$IMAGE_TAG
+      - npm test
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Pushing the Docker image...
-      - docker push $IMAGE_REPO_NAME:$IMAGE_TAG
-      - echo $CODEBUILD_BUILD_ID
       - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:019453824943:codebuid-test-topic --message "{\"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
